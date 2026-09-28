@@ -40,7 +40,8 @@ header{position:sticky;top:env(safe-area-inset-top,0px);background:rgba(255,253,
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .hero-img-box{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--paper)}
 .hero-img-box img{border-radius:0}
-.img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:repeating-linear-gradient(135deg,var(--cream),var(--cream) 10px,#fdf1e4 10px,#fdf1e4 20px);border:2px dashed var(--pink);color:var(--choco-soft);text-align:center;padding:20px}
+.img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px; border:2px dashed var(--pink);color:var(--choco-soft);text-align:center;padding:20px; background: url(..assets/src/image/interior.png);background-repeat: no-repeat;
+  background-size: auto; }
 .img-placeholder span{font-family:var(--font-head);font-weight:600;font-size:14px;color:var(--choco)}
 .hero-tag-card{position:absolute;bottom:14px;left:14px;right:14px;background:var(--paper);border-radius:16px;padding:12px 16px;display:flex;gap:10px;align-items:center;box-shadow:var(--shadow)}
 
