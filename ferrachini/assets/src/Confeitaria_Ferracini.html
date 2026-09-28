@@ -8,116 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --pink:#f7c9d8; --pink-dark:#e8899f; --butter:#fbe3a3; --mint:#bfe3cf; --mint-dark:#7fc9a0;
-  --cream:#fff8f0; --paper:#fffdf9; --choco:#6b4a3a; --choco-soft:#a3806b;
-  --line:#f0dfd0; --radius:26px; --shadow:0 14px 34px -14px rgba(107,74,58,.22);
-  --font-head:'Fredoka',system-ui,sans-serif; --font-body:'Quicksand',system-ui,sans-serif;
-}
-:root:not([data-theme="light"]) { }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{font-family:var(--font-body);background:var(--cream);color:var(--choco);line-height:1.6;font-weight:500;
-  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-h1,h2,h3,.brand{font-family:var(--font-head);font-weight:600;letter-spacing:-.01em}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block;border-radius:20px}
-.container{max-width:1140px;margin:0 auto;padding:0 22px}
-.sprinkles{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
-.sprinkles span{position:absolute;border-radius:50%;opacity:.55}
-
-header{position:sticky;top:env(safe-area-inset-top,0px);background:rgba(255,253,249,.92);backdrop-filter:blur(10px);
-  border-bottom:2px dashed var(--line);z-index:100;padding:14px 0}
-.header-row{display:flex;justify-content:space-between;align-items:center;gap:14px}
-.logo{display:flex;align-items:center;gap:10px}
-.logo-badge{width:44px;height:44px;border-radius:50%;background:var(--pink);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
-.logo-name{font-family:var(--font-head);font-size:18px;color:var(--choco)}
-.logo-tag{font-size:12px;color:var(--choco-soft)}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;font-family:var(--font-head);font-weight:600;font-size:14px;cursor:pointer;transition:.2s}
-.btn-wa{background:var(--mint-dark);color:#fff;padding:10px 18px;box-shadow:0 6px 16px -6px rgba(127,201,160,.6)}
-.btn-wa:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--pink-dark);color:#fff;padding:15px 26px;font-size:15px;box-shadow:0 10px 22px -8px rgba(232,137,159,.6)}
-.btn-primary:hover{transform:translateY(-2px)}
-.btn-outline{background:var(--paper);border:2px solid var(--pink);color:var(--choco);padding:13px 24px;font-size:15px}
-.btn-outline:hover{background:var(--pink)}
-
-.hero{position:relative;padding:64px 0 50px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;position:relative;z-index:1}
-.badge{display:inline-flex;align-items:center;gap:8px;background:var(--butter);padding:7px 16px;border-radius:999px;font-size:13px;font-weight:700;color:var(--choco);margin-bottom:18px}
-.hero h1{font-size:42px;line-height:1.2;color:var(--choco);margin-bottom:16px}
-.hero p{font-size:17px;color:var(--choco-soft);max-width:520px;margin-bottom:28px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero-img-box{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--paper)}
-.hero-img-box img{border-radius:0}
-.hero-tag-card{position:absolute;bottom:14px;left:14px;right:14px;background:var(--paper);border-radius:16px;padding:12px 16px;display:flex;gap:10px;align-items:center;box-shadow:var(--shadow)}
-
-.icon-cute{width:26px;height:26px;flex-shrink:0}
-.diffbar{background:var(--paper);border-top:2px dashed var(--line);border-bottom:2px dashed var(--line);padding:22px 0}
-.diff-grid{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
-.diff-item{display:flex;align-items:center;gap:8px;background:var(--cream);border:2px solid var(--line);padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px}
-
-section{padding:64px 0}
-.section-head{text-align:center;max-width:640px;margin:0 auto 42px}
-.eyebrow{color:var(--pink-dark);font-weight:700;font-size:13px}
-.section-title{font-size:30px;color:var(--choco);margin-top:6px}
-.section-sub{color:var(--choco-soft);margin-top:8px}
-
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.service-card{background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-.service-card:nth-child(1) .icon-wrap{background:var(--pink)}
-.service-card:nth-child(2) .icon-wrap{background:var(--butter)}
-.service-card:nth-child(3) .icon-wrap{background:var(--mint)}
-.service-card:nth-child(4) .icon-wrap{background:var(--pink)}
-.icon-wrap{width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.service-card h3{font-size:18px;margin-bottom:8px;color:var(--choco)}
-.service-card p{font-size:14px;color:var(--choco-soft)}
-
-.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-.process-card{background:var(--paper);border:2px dashed var(--pink);border-radius:var(--radius);padding:26px;text-align:center}
-.process-card .icon-wrap{margin:0 auto 14px;background:var(--butter)}
-.process-card h3{font-size:16px;margin-bottom:6px}
-.process-card p{font-size:14px;color:var(--choco-soft)}
-
-.about{background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;box-shadow:var(--shadow)}
-.about h3{font-size:24px;margin-bottom:14px}
-.about p{color:var(--choco-soft);margin-bottom:20px;font-size:15px}
-.contact-chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:600;color:var(--pink-dark)}
-.about-img{border-radius:20px;overflow:hidden;border:6px solid var(--cream)}
-.about-img img{height:280px;object-fit:cover}
-
-.demo-notice{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;background:var(--butter);padding:4px 12px;border-radius:999px;margin-top:10px}
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-.testi-card{background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
-.testi-card p{font-style:italic;font-size:14px;margin:12px 0 16px;color:var(--choco)}
-.testi-author{display:flex;align-items:center;gap:10px}
-.avatar{width:34px;height:34px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
-
-.faq-list{max-width:720px;margin:0 auto}
-.faq-item{background:var(--paper);border:2px solid var(--line);border-radius:18px;margin-bottom:12px;overflow:hidden}
-.faq-q{width:100%;background:none;border:none;padding:16px 22px;text-align:left;font-family:var(--font-head);font-size:15px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--choco)}
-.faq-chevron{color:var(--pink-dark);font-size:18px;font-weight:800}
-.faq-a{display:none;padding:0 22px 16px;color:var(--choco-soft);font-size:14px}
-.faq-a.open{display:block}
-
-.contact-card{background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:30px;box-shadow:var(--shadow)}
-.info-item{display:flex;gap:12px;margin-bottom:18px}
-.info-item .icon-cute{color:var(--pink-dark)}
-.info-h{font-size:14px;font-weight:700;margin-bottom:2px}
-.info-p{font-size:13px;color:var(--choco-soft)}
-.map-box{background:var(--cream);border:2px dashed var(--pink);border-radius:18px;display:flex;align-items:center;justify-content:center;min-height:190px;text-align:center;padding:22px}
-
-.cta{background:linear-gradient(135deg,var(--pink-dark),var(--mint-dark));color:#fff;text-align:center;padding:56px 24px;border-radius:var(--radius);margin:36px auto 0;box-shadow:var(--shadow)}
-.cta h2{font-size:28px;margin-bottom:12px;color:#fff}
-.cta p{opacity:.95;max-width:560px;margin:0 auto 24px}
-.btn-cta{background:#fff;color:var(--choco);padding:14px 28px;font-size:15px}
-
-footer{border-top:2px dashed var(--line);background:var(--paper);padding:34px 0;text-align:center;font-size:13px;color:var(--choco-soft)}
-footer a{color:var(--pink-dark);font-weight:700}
-
-@media(max-width:900px){.hero-grid,.about,.contact-card{grid-template-columns:1fr;gap:28px}.hero h1{font-size:32px}}
-@media(max-width:600px){section{padding:46px 0}.hero h1{font-size:27px}.section-title{font-size:24px}.about,.contact-card{padding:22px}.hero-actions a{width:100%;justify-content:center}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -158,7 +49,10 @@ footer a{color:var(--pink-dark);font-weight:700}
       </div>
     </div>
     <div class="hero-img-box">
-      <img src="../src/image/interior.png" alt="Doces e bolos da Confeitaria Ferracini" loading="lazy">
+      <div class="img-placeholder" style="height:380px">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#e8899f" stroke-width="1.8"/><circle cx="8.5" cy="10" r="1.6" fill="#e8899f"/><path d="M3 16l5-4 4 3 4-5 5 6" stroke="#e8899f" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span>Foto do interior da confeitaria</span>
+      </div>
       <div class="hero-tag-card">
         <svg class="icon-cute" viewBox="0 0 24 24" fill="none"><path d="M6 11c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#8a5a3a" stroke-width="1.8" stroke-linecap="round"/><path d="M4 11h16l-1.4 8.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4 11Z" fill="#f7c9d8" stroke="#8a5a3a" stroke-width="1.8"/></svg>
         <div><strong style="font-size:13px">Confeitaria Ferracini</strong><div style="font-size:11px;color:var(--choco-soft)">Curitiba - Paraná</div></div>
@@ -216,11 +110,55 @@ footer a{color:var(--pink-dark);font-weight:700}
       <p>Somos especializados em padaria &amp; confeitaria em Curitiba - Paraná, com atenção aos detalhes e foco na qualidade de cada receita.</p>
       <div class="contact-chip"><svg class="icon-cute" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8.2.5 0 1.1-.4 1.5L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3c.4-.4 1-.5 1.5-.4.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" stroke="#e8899f" stroke-width="1.8"/></svg><span>(41) 3379-7714</span></div>
     </div>
-    <div class="about-img"><img src="../src/image/restaurante.png" alt="Confeitaria Ferracini" loading="lazy"></div>
+    <div class="about-img">
+      <div class="img-placeholder" style="height:280px">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#e8899f" stroke-width="1.8"/><circle cx="8.5" cy="10" r="1.6" fill="#e8899f"/><path d="M3 16l5-4 4 3 4-5 5 6" stroke="#e8899f" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span>Foto do restaurante/loja</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="depoimentos" style="background:var(--paper)">
+<section id="unidades" style="background:var(--paper)">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Nossas Unidades</span><h2 class="section-title">Onde Nos Encontrar</h2><p class="section-sub">Escolha a unidade mais perto de você e fale direto pelo WhatsApp.</p></div>
+    <div class="carousel">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="unitTrack">
+          <div class="service-card">
+            <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 9 5.5 4h13L20 9" stroke="#8a5a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9v10h16V9" stroke="#8a5a3a" stroke-width="2" stroke-linejoin="round"/><path d="M9 19v-6h6v6" stroke="#8a5a3a" stroke-width="2" stroke-linejoin="round"/><path d="M4 9c0 1.5 1.2 2.5 2.5 2.5S9 10.5 9 9s1.2 2.5 2.5 2.5S14 10.5 14 9s1.2 2.5 2.5 2.5S20 10.5 20 9" stroke="#8a5a3a" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Matriz Francisco Derosso</h3>
+            <p>Rua Francisco Derosso, 4706 — Curitiba, PR</p>
+            <a class="btn btn-wa unit-btn" href="https://wa.me/554133797714?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Confeitaria%20Ferracini%20-%20Matriz%20(Francisco%20Derosso%2C%204706)." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 9 5.5 4h13L20 9" stroke="#8a5a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9v10h16V9" stroke="#8a5a3a" stroke-width="2" stroke-linejoin="round"/><path d="M9 19v-6h6v6" stroke="#8a5a3a" stroke-width="2" stroke-linejoin="round"/><path d="M4 9c0 1.5 1.2 2.5 2.5 2.5S9 10.5 9 9s1.2 2.5 2.5 2.5S14 10.5 14 9s1.2 2.5 2.5 2.5S20 10.5 20 9" stroke="#8a5a3a" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Panificadora Maestro</h3>
+            <p>Rua Maestro Carlos Franck — Curitiba, PR</p>
+            <a class="btn btn-wa unit-btn" href="https://wa.me/554131491817?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Panificadora%20Maestro%2C%20na%20rua%20Maestro%20Carlos%20Franck." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 9 5.5 4h13L20 9" stroke="#8a5a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9v10h16V9" stroke="#8a5a3a" stroke-width="2" stroke-linejoin="round"/><path d="M9 19v-6h6v6" stroke="#8a5a3a" stroke-width="2" stroke-linejoin="round"/><path d="M4 9c0 1.5 1.2 2.5 2.5 2.5S9 10.5 9 9s1.2 2.5 2.5 2.5S14 10.5 14 9s1.2 2.5 2.5 2.5S20 10.5 20 9" stroke="#8a5a3a" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Ferracini / São José dos Pinhais</h3>
+            <p>São José dos Pinhais / Sítio Cercado, PR</p>
+            <a class="btn btn-wa unit-btn" href="https://wa.me/554132896139?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Panificadora%20Ferracini%2C%20de%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%2FS%C3%ADtio%20Cercado." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#8a5a3a" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="#8a5a3a" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>iFood — Ferracini Maestro</h3>
+            <p>Alto Boqueirão, Curitiba — peça pelo delivery</p>
+            <a class="btn btn-outline unit-btn" href="https://www.ifood.com.br/delivery/curitiba-pr/ferracini-maestro-alto-boqueirao/e1542001-404b-4b57-b55b-b196a1411490" target="_blank" rel="noopener">Pedir no iFood</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev" onclick="moveUnit(-1)" aria-label="Unidade anterior">‹</button>
+      <button class="carousel-btn next" onclick="moveUnit(1)" aria-label="Próxima unidade">›</button>
+      <div class="carousel-dots" id="unitDots"></div>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos">
   <div class="container">
     <div class="section-head"><span class="eyebrow">Avaliações</span><h2 class="section-title">Quem Já Provou, Aprova</h2><div class="demo-notice">💛 Exemplos demonstrativos</div></div>
     <div class="testi-grid">
@@ -231,18 +169,18 @@ footer a{color:var(--pink-dark);font-weight:700}
   </div>
 </section>
 
-<section id="faq">
+<section id="faq" style="background:var(--paper)">
   <div class="container">
     <div class="section-head"><span class="eyebrow">Dúvidas</span><h2 class="section-title">Perguntas Frequentes</h2></div>
     <div class="faq-list">
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(0)"><span>Como faço um pedido?</span><span class="faq-chevron" id="fc0">+</span></button><div class="faq-a" id="fa0"><p>Pelo WhatsApp (41) 3379-7714, contando o que deseja.</p></div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(1)"><span>Qual a região de entrega?</span><span class="faq-chevron" id="fc1">+</span></button><div class="faq-a" id="fa1"><p>Atendemos Curitiba e bairros próximos. Confirme com a gente.</p></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(2)"><span>Onde vocês ficam?</span><span class="faq-chevron" id="fc2">+</span></button><div class="faq-a" id="fa2"><p>Rua Francisco Derosso, 4706, Curitiba - Paraná.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(2)"><span>Onde vocês ficam?</span><span class="faq-chevron" id="fc2">+</span></button><div class="faq-a" id="fa2"><p>Temos várias unidades em Curitiba e região — confira a seção "Onde Nos Encontrar" acima.</p></div></div>
     </div>
   </div>
 </section>
 
-<section id="contato" style="background:var(--paper)">
+<section id="contato">
   <div class="container">
     <div class="section-head"><span class="eyebrow">Contato</span><h2 class="section-title">Fale Com a Gente</h2></div>
     <div class="contact-card">
@@ -279,6 +217,35 @@ footer a{color:var(--pink-dark);font-weight:700}
 </footer>
 
 <script>
+(function(){
+  var track=document.getElementById('unitTrack');
+  var dotsBox=document.getElementById('unitDots');
+  var slides=track.children.length;
+  var idx=0;
+  for(var i=0;i<slides;i++){
+    var d=document.createElement('button');
+    d.className='carousel-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Ir para unidade '+(i+1));
+    d.onclick=(function(n){return function(){idx=n;update();};})(i);
+    dotsBox.appendChild(d);
+  }
+  function update(){
+    track.style.transform='translateX(-'+(idx*100)+'%)';
+    var dots=dotsBox.children;
+    for(var i=0;i<dots.length;i++){dots[i].classList.toggle('active',i===idx);}
+  }
+  window.moveUnit=function(dir){idx=(idx+dir+slides)%slides;update();};
+  var startX=null;
+  track.addEventListener('touchstart',function(e){startX=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',function(e){
+    if(startX===null)return;
+    var diff=e.changedTouches[0].clientX-startX;
+    if(diff>40) window.moveUnit(-1);
+    else if(diff<-40) window.moveUnit(1);
+    startX=null;
+  });
+})();
+
 function toggleFaq(i){
   var ans=document.getElementById('fa'+i), chev=document.getElementById('fc'+i);
   var open=ans.classList.contains('open');
